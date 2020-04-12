@@ -396,6 +396,7 @@ body  {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
+    overflow: auto;
 }
 
 .is-open  {
@@ -452,14 +453,18 @@ body  {
     display: -moz-flex;
     display: -ms-flex;
     display: flex;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
-    align-items: flex-start;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     padding-bottom: 8px;
     border-bottom: 1px solid #d9d9d9;
 }
@@ -468,9 +473,15 @@ body  {
     margin-bottom: 15px;
 }
 
+.food-name  {
+    font-size: 18px;
+    line-height: 32px;
+    color: #000000;
+}
+
 .food-price  {
     margin-left: auto;
-    margin-right: 47px;
+    margin-right: 10%;
     font-weight: bold;
     font-size: 20px;
     line-height: 32px;
@@ -531,6 +542,10 @@ body  {
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .footer-buttons  {
@@ -745,6 +760,10 @@ body  {
     .footer  {
         padding: 48px 0;
     }
+    
+    .food-price  {
+        margin-right: 5%;
+    }    
 }
 
 @media (max-width: 480px)  {
@@ -813,5 +832,70 @@ body  {
     
     .footer-link:not(:last-child)  {
         margin-right: 0;
+    }
+    
+    .modal-dialog  {
+        max-width: 240px;
+    }
+    
+    .modal-title  {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    
+    .close  {
+        font-size: 30px;
+    }
+    
+    .modal-body  {
+        margin-bottom: 42px;
+    }
+    
+    .food-name  {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .food-price  {
+        margin-right: 0;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    .food-counter  {
+        -webkit-flex-basis: 100%;
+        -moz-flex-basis: 100%;
+        -ms-flex-basis: 100%;
+        flex-basis: 100%;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        margin-top: 16px;
+    }
+
+    .counter-button  {
+        width: 30px;
+        height: 23px;
+    }
+
+    .counter  {
+        font-size: 14px;
+    }
+    
+    .modal-footer  {
+        justify-content: flex-start;
+    }
+
+    .model-pricetag  {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+        margin-bottom: 20px;
+    }
+    
+    .footer-buttons  {
+        flex: 1;
+        justify-content: space-between;
     }
 }
